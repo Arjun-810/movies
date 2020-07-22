@@ -1,0 +1,15 @@
+
+    <div class="container mt-5" ng-controller="rootController">
+        <div class="row row-content">
+        <div class="col-12 col-md-4 col-lg-3" ng-repeat="employee in employees">
+             <div class="cafe-section mt-5">
+                            <img class="img-fluid" src="{{employee.img_url}}">            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                     <span class="points">8.4</span>
+                </div>
+                <span class="name">            {{employee.movie_name}}</span><br>
+                <span class="name">  <button class="btn btn-primary" value="{{employee.id}}" onclick="myfunc(value)" ui-sref="movie-view">View movie</button></span>
+            </div>
+        </div>
+         </div>  

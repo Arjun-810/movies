@@ -1,0 +1,45 @@
+  <style>
+  #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4c87af;
+    color: white;
+  }
+  </style>
+  <div ng-controller="commentController">
+        <h1>EDIT/DELET Movies</h1>
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Movie Name</th>
+                    <th>Comments</th>
+                    <th>Delet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.movieList__movie_name}}</td>
+                    <td>{{employee.comments}}</td>
+                    <td><button type="button" class="btn btn-primary" value={{employee.id[0]}} onclick="deletCmnts(value)" ng-click="deletDatas()">DELET</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

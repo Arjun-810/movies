@@ -1,0 +1,43 @@
+<style>
+    .main{
+        font-family: 'Poppins', sans-serif;
+        {% comment %} background-color: wheat; {% endcomment %}
+        padding: 30px;  
+    }
+    .discription{
+        padding: 50px
+    }
+    .main-cmnt{
+        background-color: wheat;
+        margian: 30px
+    }
+</style>
+    <div class="container mt-5 main" ng-controller="twelveController">
+        <div class="row row-cotent" ng-repeat="employee in employees">
+            <div class="col-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" width="1280px" height="720px"  ng-src="{{embedUrl}}" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="discription" style="margian:50px">
+                    <div class="col-md-6 col-12">
+                    <strong> <h3>Description:</h3> </strong>
+                    {{employee.title}}
+                    </div>
+                </div>
+                <div class="cmnt">
+                <h1>comments</h1>
+                <div class="row row-cotent" class="main-cmnt" ng-repeat="viewCmnt in comments">
+                    <strong> {{viewCmnt.user__frist_name}}</strong>
+                    <br>
+                    {{viewCmnt.comments}}
+                    </div>
+                </div>
+                <div class="row row-cotent">
+                    <input type="input" ng-model="addcmnt">
+                    <button class="btn btn-warning" ng-click="addcmnts(addcmnt)">Send</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>  

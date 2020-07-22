@@ -1,0 +1,58 @@
+<section ng-controller="addController">
+    <div class="container" style="margin-top: 80px; margin-bottom: 80px;">
+        <div class="row justify-content-md-center">
+            <div class="card app-fat">
+                <div class="card-body">
+                    <h4 class="app-card-title"><i class="fas fa-hospital fa-2x"></i> Add More Movies</h4>
+                    <div>
+                        <div class="row row-content">
+                             <div class="col-12 col-md-5 mt-4">
+                                <div for="problem"><i class="fas fa-envelope-square"></i> Movie Name</div>
+                            </div>
+                            <div class="col-12 col-md-7 mt-4">
+                                <input type="text" class="inp mt-2" id="patient_problem"
+                                    placeholder="Mention Movie Name" ng-model="movie_name" required>
+                            </div>
+                        </div>
+                        <div class="row row-content">
+                            <div class="col-12 col-md-5 mt-4">
+                                <div for="problem"><i class="fas fa-envelope-square"></i> Poster Url</div>
+                            </div>
+                            <div class="col-12 col-md-7 mt-4">
+                                <input type="text" class="inp mt-2" id="patient_problem"
+                                    placeholder="Mention Poster Url" ng-model="poster_url" required>
+                            </div>
+                        </div>
+                        <div class="row row-content">
+                            <div class="col-12 col-md-5 mt-4">
+                                <div for="Ext_disease"><i class="fas fa-redo-alt"></i> Vedio Url</div>
+                            </div>
+                            <div class="col-12 col-md-7 mt-4">
+                                <input type="text" class="inp mt-2" id="permanent_problem"
+                                    placeholder="Your Vedio Url" ng-model="vedio_url" required>
+                            </div>
+                        </div>
+                        <div class="row row-content">
+                           <div class="col-12 col-md-5 mt-4">
+                                <div for="Ext_disease"><i class="fas fa-redo-alt"></i> Description</div>
+                            </div>
+                            <div class="col-12 col-md-7 mt-4">
+                                <input type="text" class="inp mt-2" id="permanent_problem"
+                                    placeholder="Enter Movie Description" ng-model="movir_description" required>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <!-- <input class="btn btn-block btn-warning" type="button" onclick="validation()">Register</input> -->
+                            <input class="btn btn-block btn-warning" type="submit" name="submit"
+                                value="Submit" ng-click="addMovie(movie_name, poster_url, vedio_url, movir_description)">
+                        </div>
+
+                        <div class="mt-4 text-center">
+                            Back to<a href="patient-dashbord.html"> Manager Dashbord</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
